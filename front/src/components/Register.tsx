@@ -46,7 +46,7 @@ const Register: React.FC = () => {
     if (username && email && password) {
       register(username, email, password).then(
         (response) => {
-          setMessage("Register Success!");
+          setMessage(response.data.message);
           setSuccessful(true);
         },
         (error) => {
